@@ -14,6 +14,7 @@ import AddEditNews from "./pages/AddEditNews";
 import AdminHomeNews from "./pages/AdminHomeNews";
 import NewsDetails from "./pages/NewsDetails";
 import UpdateNews from "./pages/UpdateNews";
+import NotFounded from "./pages/NotFounded";
 
 function App() {
 
@@ -46,9 +47,9 @@ function App() {
       <Routes>
         <Route exact path="/" element={<NewsHome />} />
         <Route path="/auth" element={<Auth setActive={setActive} />} />
-
-        <Route path="/create" element={ user?.uid ?<AddEditNews user={user} /> : <Navigate to = "/" /> } />
-        <Route path="/adminHome" element={user?.uid ? <AdminHomeNews user={user} setActive={setActive} /> : <Navigate to = "/" />  } />
+        <Route path="/*" element={<NotFounded  />} />
+        <Route path="/create" element={ user?.uid ?<AddEditNews user={user} /> : <Navigate to = "/*" /> } />
+        <Route path="/adminHome" element={user?.uid ? <AdminHomeNews user={user} setActive={setActive} /> : <Navigate to = "/*" />  } />
         <Route path="/detail/:id" element={<NewsDetails setActive={setActive}  />} />
         <Route path="/update/:id" element={<UpdateNews setActive={setActive}  />} />
         

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import transitions from "bootstrap";
+import BG from '../../Images/deranalogo.png';
 
 const Header = ({ active, setActive, user, handleLogout }) => {
   const userId = user?.uid;
@@ -25,6 +26,8 @@ const Header = ({ active, setActive, user, handleLogout }) => {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
+
+          <img className="S.gif" src={BG} alt='bg img' style={{ width: "7%", height: "5%", marginTop: "-5px", marginRight: "10px" }} />
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <Link to="/" style={{ textDecoration: "none" }}>
                   <li
