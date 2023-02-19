@@ -14,10 +14,10 @@ const initialState = {
 };
 
 const Auth = ({ setActive
- }) => {
+}) => {
   const [state, setState] = useState(initialState);
   const [signUp, setSignUp] = useState(false);
-  const [user, setUser] = useState([{username: ""}]);
+  const [user, setUser] = useState([{ username: "" }]);
   const { email, password, firstName, lastName, confirmPassword } = state;
 
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ const Auth = ({ setActive
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
-  
+
 
   const handleAuth = async (e) => {
     e.preventDefault();

@@ -27,25 +27,23 @@ const Header = ({ active, setActive, user, handleLogout }) => {
               id="navbarSupportedContent"
             >
 
-          <img className="S.gif" src={BG} alt='bg img' style={{ width: "7%", height: "5%", marginTop: "-5px", marginRight: "10px" }} />
+              <img className="S.gif" src={BG} alt='bg img' style={{ width: "7%", height: "5%", marginTop: "-5px", marginRight: "10px" }} />
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <Link to="/" style={{ textDecoration: "none" }}>
                   <li
-                    className={`nav-item nav-link ${
-                      active === "home" ? "active" : ""
-                    }`}
+                    className={`nav-item nav-link ${active === "home" ? "active" : ""
+                      }`}
                     onClick={() => setActive("home")}
                   >
                     Home
                   </li>
                 </Link>
-                
+
 
                 <Link to="/create" style={{ textDecoration: "none" }}>
                   <li
-                    className={`nav-item nav-link ${
-                      active === "create" ? "active" : ""
-                    }`}
+                    className={`nav-item nav-link ${active === "create" ? "active" : ""
+                      }`}
                     onClick={() => setActive("create")}
                   >
                     Create
@@ -54,16 +52,15 @@ const Header = ({ active, setActive, user, handleLogout }) => {
 
                 <Link to="/adminHome" style={{ textDecoration: "none" }}>
                   <li
-                    className={`nav-item nav-link ${
-                      active === "adminHome" ? "active" : ""
-                    }`}
+                    className={`nav-item nav-link ${active === "adminHome" ? "active" : ""
+                      }`}
                     onClick={() => setActive("adminHome")}
                   >
-                   Admin Dashbord
+                    Admin Dashbord
                   </li>
                 </Link>
 
-                
+
               </ul>
               <div className="row g-3">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -91,9 +88,8 @@ const Header = ({ active, setActive, user, handleLogout }) => {
                   ) : (
                     <Link to="/auth" style={{ textDecoration: "none" }}>
                       <li
-                        className={`nav-item nav-link ${
-                          active === "login" ? "active" : ""
-                        }`}
+                        className={`nav-item nav-link ${active === "login" ? "active" : ""
+                          }`}
                         onClick={() => setActive("login")}
                       >
                         Login

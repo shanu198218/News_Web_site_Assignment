@@ -1,7 +1,7 @@
 import { collection, deleteDoc, doc, onSnapshot } from 'firebase/firestore';
 import React, { useState, useEffect } from 'react';
 import NewsSection from '../components/NewsSection';
-import { db,   } from '../util/firebase';
+import { db, } from '../util/firebase';
 import "../pages/AdminHome.css"
 import { toast } from 'react-toastify';
 
@@ -32,13 +32,13 @@ const AdminHomeNews = () => {
   console.log("news", news);
 
   const handleDelete = async (id) => {
-    if(window.confirm("Are you sure ? ")){
-      try{
+    if (window.confirm("Are you sure ? ")) {
+      try {
         setLoading(true);
-        await deleteDoc(doc (db, "Article", id));
+        await deleteDoc(doc(db, "Article", id));
         toast.success("News Post deleted added");
         setLoading(false);
-      }catch (err){
+      } catch (err) {
         console.log(err);
       }
     }
@@ -46,23 +46,18 @@ const AdminHomeNews = () => {
 
 
   return (
-    
-    <div class="row-news">
-      
-  <div class="column-news">
-    <div class="card-news"> <NewsSection news={news} user={user} handleDelete={handleDelete} />
-    
-  </div>
- 
-  
- 
-  
-  </div>
-  
-  </div>
-  
 
-    
+    <div class="row-news">
+
+      <div class="column-news">
+        <div class="card-news"> <NewsSection news={news} user={user} handleDelete={handleDelete} />
+
+        </div>
+      </div>
+    </div>
+
+
+
   )
 }
 

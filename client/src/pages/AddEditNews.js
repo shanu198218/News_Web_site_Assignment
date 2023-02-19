@@ -64,7 +64,7 @@ const AddEditNews = ({ user, setActive }) => {
     file && uploadFile();
   }, [file])
 
-
+//sumbission file
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (topic && desc && file) {
@@ -86,7 +86,7 @@ const AddEditNews = ({ user, setActive }) => {
   return (
 
     <div className="container-fluid mb-4">
-      <h1 className="" style={{textAlign:"center" , color: "#000080", fontWeight: "200px"}}>New Post</h1>
+      <h1 className="" style={{ textAlign: "center", color: "#000080", fontWeight: "200px" }}>New Post</h1>
       <div className="container">
         <div className="col-12">
           <div className="text-center heading py-2">

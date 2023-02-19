@@ -1,66 +1,60 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Float four columns side by side */
-  .column-news {
-    float: left;
-    width: 90%;
-  
-    padding: 5%;
-    align-items: center;
-    justify-content: center;
-    padding-left: 20%;
-  }
-  
-  /* Remove extra left and right margins, due to padding in columns */
-  .row-news {margin: 0 -20px;}
-  
-  /* Clear floats after the columns */
-  .row-news:after {
-    content: "";
-    display: table;
-    clear: both;
-   
-    
-
-  }
-
-span .short-description{
-    display: inline-block;
-    text-overflow: inherit;
+  box-sizing: border-box;
 }
- 
 
-  .col-md-5{
-    height: 300px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column-news {
+  float: left;
+  width: 90%;
+
+  padding: 5%;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20%;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row-news {
+  margin: 0 -20px;
+}
+
+/* Clear floats after the columns */
+.row-news:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+span .short-description {
+  display: inline-block;
+  text-overflow: inherit;
+}
+
+.col-md-5 {
+  height: 300px;
+}
+
+/* Style the counter cards */
+.card-news {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 25px;
+  text-align: center;
+
+  background-color: #f1f1f1;
+  gap: 20%;
+}
+
+/* //desc */
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column-news {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-  
-  /* Style the counter cards */
-  .card-news {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding: 25px;
-    text-align: center;
-    
-    background-color: #f1f1f1;
-    gap: 20%;
-  }
-
-
-  /* //desc */
-
-  
-  
-  
-  /* Responsive columns - one column layout (vertical) on small screens */
-  @media screen and (max-width: 600px) {
-    .column-news {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
+}

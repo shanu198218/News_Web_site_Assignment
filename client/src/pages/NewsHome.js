@@ -1,7 +1,7 @@
 import { collection, deleteDoc, doc, onSnapshot } from 'firebase/firestore';
 import React, { useState, useEffect } from 'react';
 import NewsSection from '../components/NewsSection';
-import { db,   } from '../util/firebase';
+import { db, } from '../util/firebase';
 import "../pages/AdminHome.css"
 import { toast } from 'react-toastify';
 import SectionNews_User from '../components/SectionNews_User';
@@ -32,26 +32,26 @@ const NewsHome = () => {
 
   console.log("news", news);
 
-  
+
 
   return (
-    
-    <div class="row-news">
-      
-  <div class="column-news">
-    <div class="card-news"> <SectionNews_User news={news} user={user}  />
-    
-  </div>
- 
-  
- 
-  
-  </div>
-  
-  </div>
-  
 
-    
+    <div class="row-news">
+
+      <div class="column-news">
+        <div class="card-news"> <SectionNews_User news={news} user={user} />
+
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+
+
+
   )
 }
 

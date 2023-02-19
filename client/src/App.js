@@ -47,12 +47,12 @@ function App() {
       <Routes>
         <Route exact path="/" element={<NewsHome />} />
         <Route path="/auth" element={<Auth setActive={setActive} />} />
-        <Route path="/*" element={<NotFounded  />} />
-        <Route path="/create" element={ user?.uid ?<AddEditNews user={user} /> : <Navigate to = "/*" /> } />
-        <Route path="/adminHome" element={user?.uid ? <AdminHomeNews user={user} setActive={setActive} /> : <Navigate to = "/*" />  } />
-        <Route path="/detail/:id" element={<NewsDetails setActive={setActive}  />} />
-        <Route path="/update/:id" element={<UpdateNews setActive={setActive}  />} />
-        
+        <Route path="/*" element={<NotFounded />} />
+        <Route path="/create" element={user?.uid ? <AddEditNews user={user} /> : <Navigate to="/*" />} />
+        <Route path="/adminHome" element={user?.uid ? <AdminHomeNews user={user} setActive={setActive} /> : <Navigate to="/*" />} />
+        <Route path="/detail/:id" element={<NewsDetails setActive={setActive} />} />
+        <Route path="/update/:id" element={<UpdateNews setActive={setActive} />} />
+
       </Routes>
     </div>
   );
