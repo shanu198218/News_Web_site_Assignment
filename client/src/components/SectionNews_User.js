@@ -10,7 +10,7 @@ const SectionNews_User = ({ news, user, handleDelete }) => {
 
         <div >
 
-            <div className="blog-heading text-start py- mb-5" style={{ color: "white", textAlign: "center", fontWeight: "200px", fontSize: "150px", backgroundColor: " #dd1344" }}>Articles</div>
+            <div className="blog-heading text-start py- mb-5" style={{ color: "white" ,textAlign: "center", fontWeight: "200px", fontSize: "130px", backgroundColor: " #dd1344" }}>Articles</div>
 
             {news?.map((item) => (
                 <div className="row pb-5" key={item.id}>
